@@ -7,21 +7,24 @@
 }
 body {
   display: flex;
-  height: 100vh;
-  padding: 10px;
+  flex-direction: column;
+  padding: 40px;
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(32, 56, 208, 1) 75%, rgba(0, 212, 255, 1) 100%);
 }
-.container {
+.container,
+.admin-container {
   max-width: 960px;
   width: 100%;
   background: #fff;
   padding: 20px 20px;
+  margin: 2px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
-.container .title {
+.container .title,
+.admin-container .title {
   font-size: 25px;
   font-weight: 600;
   position: relative;
@@ -30,32 +33,46 @@ body {
   content: "";
   position: absolute;
   height: 4px;
-  width: 203px;
+  width: 204px;
   left: 0;
   bottom: 0;
   border-radius: 5px;
   background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(32, 56, 208, 1) 75%, rgba(0, 212, 255, 1) 100%);
 }
-.container form .form-details {
+.admin-container .title::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 226px;
+  left: 0;
+  bottom: 0;
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(32, 56, 208, 1) 75%, rgba(0, 212, 255, 1) 100%);
+}
+.container form .form-details,
+.admin-container form .admin-details {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 20px 0 12px 0;
 }
-.form-details .input-box {
+.form-details .input-box,
+.admin-details .input-box {
   width: calc(100% / 2 - 15px);
   margin-bottom: 15px;
 }
-.form-details .input-box input {
+.form-details .input-box input,
+.admin-details .input-box input {
   height: 30px;
   width: 100%;
   border-radius: 5px;
   border: 1px solid black;
   padding-left: 3px;
+  font-size: 14px;
 }
 .form-details .lower-box {
   width: calc(100% / 3 - 15px);
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 .form-details .lower-box select,
 input {
@@ -67,7 +84,7 @@ input {
 }
 .form-details .text-box {
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 .form-details .text-box textarea {
   width: 100%;
@@ -79,7 +96,7 @@ input {
 }
 form .button {
   height: 30px;
-  margin: 30px 0;
+  margin: 15px 0;
 }
 form .button input {
   height: 100%;
