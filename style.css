@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  height: 100vh;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(32, 56, 208, 1) 75%, rgba(0, 212, 255, 1) 100%);
+}
+.container {
+  max-width: 960px;
+  width: 100%;
+  background: #fff;
+  padding: 20px 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+.container .title {
+  font-size: 25px;
+  font-weight: 600;
+  position: relative;
+}
+.container .title::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 203px;
+  left: 0;
+  bottom: 0;
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(32, 56, 208, 1) 75%, rgba(0, 212, 255, 1) 100%);
+}
+.container form .form-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+.form-details .input-box {
+  width: calc(100% / 2 - 15px);
+  margin-bottom: 15px;
+}
+.form-details .input-box input {
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding-left: 3px;
+}
+.form-details .lower-box {
+  width: calc(100% / 3 - 15px);
+  margin-bottom: 5px;
+}
+.form-details .lower-box select,
+input {
+  height: 30px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-left: 3px;
+}
+.form-details .text-box {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.form-details .text-box textarea {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-left: 3px;
+  font-size: 14px;
+}
+form .button {
+  height: 30px;
+  margin: 30px 0;
+}
+form .button input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(32, 56, 208, 1) 75%, rgba(0, 212, 255, 1) 100%);
+}
+form .button input:hover {
+  background: linear-gradient(-135deg, rgba(2, 0, 36, 1) 0%, rgba(32, 56, 208, 1) 75%, rgba(0, 212, 255, 1) 100%);
+}
