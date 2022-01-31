@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+li,
+a,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #ecf0f1;
+  text-decoration: none;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 1%;
+  background-color: #24252a;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-image: url(background.jpg);
+}
+.workOrder,
+.adminInput,
+.service,
+.history {
+  width: calc(100% / 4 - 10px);
+  height: 200px;
+  border: 1px solid black;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 1%;
+  background-color: #24252a;
+  color: #ecf0f1;
+}
+img {
+  height: 40px;
+  width: 120px;
+  cursor: pointer;
+  margin-right: auto;
+  float: left;
+}
+.navLinks {
+  list-style: none;
+}
+.navLinks li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+.navLinks li a {
+  transition: all 0.3s ease 0s;
+}
+.navLinks li a:hover {
+  color: #0088a9;
+}
+button {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 37px auto 0;
+  width: calc(280px * 4);
+}
+
+.card {
+  box-shadow: 0 3px 10px 0 #aaa;
+  cursor: pointer;
+  height: 280px;
+  position: relative;
+  width: 243px;
+}
+
+.card h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card.visited {
+  box-shadow: 0 3px 10px 2px #444;
+}
+
+@media (max-width: 1100px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    width: calc(280px * 2);
+  }
+  .card {
+    margin: 0 auto 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    display: block;
+    width: 100vw;
+  }
+  .card {
+    margin: 0 auto 2rem;
+  }
+}
