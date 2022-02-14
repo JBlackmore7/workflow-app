@@ -1,10 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
-* {
-  box-sizing: border-box;
+body {
   margin: 0;
-  padding: 0;
+  height: 100vh;
 }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  background-color: #24252a;
+}
+
+footer {
+  padding: 10px 10px;
+  background-color: #24252a;
+}
+
 li,
 a,
 button {
@@ -14,36 +26,7 @@ button {
   color: #ecf0f1;
   text-decoration: none;
 }
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 1%;
-  background-color: #24252a;
-}
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background-image: url(background.jpg);
-}
-.workOrder,
-.adminInput,
-.service,
-.history {
-  width: calc(100% / 4 - 10px);
-  height: 200px;
-  border: 1px solid black;
-}
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 1%;
-  background-color: #24252a;
-  color: #ecf0f1;
-}
+
 img {
   height: 40px;
   width: 120px;
@@ -51,19 +34,31 @@ img {
   margin-right: auto;
   float: left;
 }
-.navLinks {
-  list-style: none;
-}
+
 .navLinks li {
-  display: inline-block;
+  display: inline-flex;
   padding: 0px 20px;
 }
-.navLinks li a {
+
+.footerLinks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerLinks a {
+  font-size: 12px;
+}
+
+.navLinks li a,
+.footerLinks a {
   transition: all 0.3s ease 0s;
 }
-.navLinks li a:hover {
+
+.navLinks li a:hover,
+.footerLinks a:hover {
   color: #0088a9;
 }
+
 button {
   margin-left: 20px;
   padding: 9px 25px;
@@ -72,51 +67,94 @@ button {
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
+  text-align: center;
 }
+
 button:hover {
   background-color: rgba(0, 136, 169, 0.8);
 }
 
-.cards {
+main {
+  height: 100vh;
+  background-image: url(background.jpg);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+main .dashCard a {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 37px auto 0;
-  width: calc(280px * 4);
-}
+  grid-template-columns: 300px;
+  grid-template-rows: 450px 100px;
+  grid-template-areas: "images" "text";
 
-.card {
-  box-shadow: 0 3px 10px 0 #aaa;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  margin: 30px;
+  background: #24252a;
+  transition: 0.5s ease;
   cursor: pointer;
-  height: 280px;
-  position: relative;
-  width: 243px;
 }
 
-.card h2 {
-  font-size: 20px;
-  font-weight: bold;
+main .dashCard a:hover {
+  transform: scale(1.12);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 }
 
-.card.visited {
-  box-shadow: 0 3px 10px 2px #444;
+.workOrderImage {
+  grid-area: images;
+  background: url(create.png);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
 }
 
-@media (max-width: 1100px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-    width: calc(280px * 2);
-  }
-  .card {
-    margin: 0 auto 2rem;
-  }
+.workOrderText {
+  grid-area: text;
+  margin: 25px;
+  font-size: 22px;
 }
 
-@media (max-width: 768px) {
-  .cards {
-    display: block;
-    width: 100vw;
-  }
-  .card {
-    margin: 0 auto 2rem;
-  }
+.adminImage {
+  grid-area: images;
+  background: url(admin.png);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.adminText {
+  grid-area: text;
+  margin: 25px;
+  font-size: 22px;
+}
+
+.serviceImage {
+  grid-area: images;
+  background: url(service.png);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.serviceText {
+  grid-area: text;
+  margin: 25px;
+  font-size: 22px;
+}
+
+.historyImage {
+  grid-area: images;
+  background: url(history.png);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.historyText {
+  grid-area: text;
+  margin: 25px;
+  font-size: 22px;
 }
