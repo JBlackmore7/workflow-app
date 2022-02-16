@@ -3,18 +3,14 @@
 body {
   margin: 0;
   height: 100vh;
+  background-image: url(images/background.jpg);
 }
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10px;
-  background-color: #24252a;
-}
-
-footer {
-  padding: 10px 10px;
-  background-color: #24252a;
+  padding: 15px 10px;
+  background-color: #3d4168;
 }
 
 li,
@@ -40,22 +36,11 @@ img {
   padding: 0px 20px;
 }
 
-.footerLinks {
-  display: flex;
-  justify-content: space-between;
-}
-
-.footerLinks a {
-  font-size: 12px;
-}
-
-.navLinks li a,
-.footerLinks a {
+.navLinks li a {
   transition: all 0.3s ease 0s;
 }
 
-.navLinks li a:hover,
-.footerLinks a:hover {
+.navLinks li a:hover {
   color: #0088a9;
 }
 
@@ -75,8 +60,6 @@ button:hover {
 }
 
 main {
-  height: 100vh;
-  background-image: url(background.jpg);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -85,27 +68,27 @@ main {
 
 main .dashCard a {
   display: grid;
-  grid-template-columns: 300px;
-  grid-template-rows: 450px 100px;
+  grid-template-columns: 275px;
+  grid-template-rows: 400px 80px;
   grid-template-areas: "images" "text";
 
   border-radius: 15px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   text-align: center;
-  margin: 30px;
-  background: #24252a;
+  margin: 70px 35px;
+  background-color: #3d4168;
   transition: 0.5s ease;
   cursor: pointer;
 }
 
 main .dashCard a:hover {
-  transform: scale(1.12);
+  transform: scale(1.15);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 }
 
 .workOrderImage {
   grid-area: images;
-  background: url(create.png);
+  background: url(images/create.png);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;
@@ -119,7 +102,7 @@ main .dashCard a:hover {
 
 .adminImage {
   grid-area: images;
-  background: url(admin.png);
+  background: url(images/admin.png);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;
@@ -133,7 +116,7 @@ main .dashCard a:hover {
 
 .serviceImage {
   grid-area: images;
-  background: url(service.png);
+  background: url(images/service.png);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;
@@ -147,7 +130,7 @@ main .dashCard a:hover {
 
 .historyImage {
   grid-area: images;
-  background: url(history.png);
+  background: url(images/history.png);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;
