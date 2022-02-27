@@ -1,0 +1,111 @@
+{
+  "createOrder": [
+    {
+      "contactName": "Keri Blackmore",
+      "companyName": "KAB Enterprises",
+      "contactNumber": "709-699-5918",
+      "companyAddress": "5 Raleigh Street, St. John's, NL",
+      "contactEmail": "kerblackmore@gmail.com",
+      "workSite": "Blue on Water",
+      "details": "(5) 10lb ABC Extinguishers\r\n(2) 5lb CO2 Extinguishers\r\n(1) 9L K-Class Extinguisher",
+      "workorderType": "service",
+      "employeeName": "Jared Blackmore",
+      "date": "2022-02-26",
+      "submit": "Create",
+      "id": 1
+    }
+  ],
+  "adminInput": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "serviceNumber": "58826",
+      "inspectionNumber": "",
+      "salesorderNumber": "",
+      "poNumber": "",
+      "submit": "Update Work Order",
+      "id": 3
+    },
+    {
+      "serviceNumber": "58826",
+      "inspectionNumber": "",
+      "salesorderNumber": "",
+      "poNumber": "",
+      "submit": "Update Work Order",
+      "id": 4
+    }
+  ],
+  "serviceWork": [
+    {
+      "serviceDetails": "dfgdfgdf",
+      "truckNumber": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "quantity": [
+        "5",
+        "2",
+        "1",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "partNumber": [
+        "dfgdf",
+        "dfgdfg",
+        "dfgdf",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "description": [
+        "gdfgdf",
+        "gdfgd",
+        "dfgdfgdfg",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "condemnationDetails": "none.",
+      "submit": "Update Work Order",
+      "id": 1
+    }
+  ],
+  "completeOrder": []
+}
