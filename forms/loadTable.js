@@ -1,31 +1,39 @@
+const headers = {
+  companyName: "Company Name",
+  details: "Details",
+  workorderType: "Type of Work Order",
+  date: "Date",
+};
+
 async function loadIntoTable(url, table) {
   const tableHead = table.querySelector("thead");
   const tableBody = table.querySelector("tbody");
   const response = await fetch(url);
-  const { headers, createOrder } = await response.json();
+
+  const createOrder = await response.json();
 
   // Clear the table
   tableHead.innerHTML = "<tr></tr>";
   tableBody.innerHTML = "";
 
   // Populate the headers
-  for (const headerText of headers) {
+  Object.values(headers).forEach((element) => {
     const headerElement = document.createElement("th");
 
-    headerElement.textContent = headerText;
+    headerElement.textContent = element;
     tableHead.querySelector("tr").appendChild(headerElement);
-  }
+  });
 
   // Populate the rows
   for (const row of createOrder) {
     const rowElement = document.createElement("tr");
 
-    for (const cellText of row) {
+    Object.keys(headers).forEach((element) => {
       const cellElement = document.createElement("td");
 
-      cellElement.textContent = cellText;
+      cellElement.textContent = row[element];
       rowElement.appendChild(cellElement);
-    }
+    });
 
     tableBody.appendChild(rowElement);
   }

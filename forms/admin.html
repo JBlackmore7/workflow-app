@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,7 +8,10 @@
   </head>
   <body>
     <div class="adminContainer">
-      <table id="myData"></table>
+      <table name="table" id="myData">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
       <div class="title">Administration Input</div>
       <form action="http://localhost:3000/adminInput" method="post" id="adminInput">
         <div class="adminDetails">
@@ -37,6 +40,6 @@
       <p id="log"></p>
     </div>
     <script src="update.js"></script>
-    <script src="action.js"></script>
+    <script src="loadTable.js"></script>
   </body>
 </html>

@@ -1,16 +1,4 @@
 {
-  "headers": [
-    "Contact Name",
-    "Company Name",
-    "Contact Number",
-    "Company Address",
-    "Contact E-Mail",
-    "Work Site",
-    "Details",
-    "Type of Work Order",
-    "Employee Name",
-    "Date"
-  ],
   "createOrder": [
     {
       "contactName": "Keri Blackmore",
