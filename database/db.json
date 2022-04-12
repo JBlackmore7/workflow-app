@@ -1,0 +1,62 @@
+{
+  "createOrder": [
+    {
+      "contactName": "Keri Blackmore",
+      "companyName": "KAB Enterprises",
+      "contactNumber": "709-699-5918",
+      "companyAddress": "5 Raleigh Street, St. John's, NL",
+      "contactEmail": "kerblackmore@gmail.com",
+      "workSite": "Blue on Water",
+      "details": "(5) 10lb ABC Extinguishers\r\n(2) 5lb CO2 Extinguishers\r\n(1) 9L K-Class Extinguisher",
+      "workorderType": "service",
+      "employeeName": "Jared Blackmore",
+      "date": "2022-02-26",
+      "submit": "Create",
+      "id": 1
+    },
+    {
+      "contactName": "Jared Blackmore",
+      "companyName": "The Antidote",
+      "contactNumber": "7096998777",
+      "companyAddress": "35 Spratt Place, St. John's, NL",
+      "contactEmail": "jblackmore17@gmail.com",
+      "workSite": "N/A",
+      "details": "(2) 10lb CO2 Extinguishers",
+      "workorderType": "service",
+      "employeeName": "Gord Reid",
+      "date": "2022-03-02",
+      "submit": "Create",
+      "id": 3
+    },
+    {
+      "contactName": "Jared Blackmore",
+      "companyName": "JJB Enterprises",
+      "contactNumber": "7096998777",
+      "companyAddress": "5 Raleigh Street, St. John's, NL, Canada",
+      "contactEmail": "jblackmore17@gmail.com",
+      "workSite": "na",
+      "details": "test",
+      "workorderType": "newInstall",
+      "employeeName": "Gord Reid",
+      "date": "2022-03-21",
+      "submit": "Create",
+      "id": 4
+    },
+    {
+      "contactName": "Jared Blackmore",
+      "companyName": "JJB Enterprises",
+      "contactNumber": "7096998777",
+      "companyAddress": "5 Raleigh Street, St. John's, NL, Canada",
+      "contactEmail": "jblackmore17@gmail.com",
+      "workSite": "N/A",
+      "details": "test",
+      "workorderType": "inspection",
+      "employeeName": "Gord Reid",
+      "date": "2022-03-21",
+      "id": 13
+    }
+  ],
+  "adminInput": [],
+  "serviceWork": [],
+  "completeOrder": []
+}

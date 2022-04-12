@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Service Work Form</title>
+  </head>
+  <body>
+    <div class="serviceContainer">
+      <div class="title">Service Work</div>
+      <form action="http://localhost:3000/serviceWork" method="post" id="serviceWork">
+        <div class="serviceDetails">
+          <div class="textBox">
+            <label for="serviceDetails">Description of Work Performed</label>
+            <br />
+            <textarea
+              name="serviceDetails"
+              id="serviceDetails"
+              rows="5"
+              placeholder="Enter description of work performed..."
+              required
+            ></textarea>
+          </div>
+          <div class="materialsTable">
+            <label for="materialsTable">Materials/Labor</label>
+            <table>
+              <thead>
+                <tr>
+                  <th>Truck Number</th>
+                  <th>Quantity</th>
+                  <th>Part Number</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="text" name="row1" /></td>
+                  <td><input type="number" name="row1" /></td>
+                  <td><input type="text" name="row1" /></td>
+                  <td><input type="text" name="row1" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" name="row2" /></td>
+                  <td><input type="number" name="row2" /></td>
+                  <td><input type="text" name="row2" /></td>
+                  <td><input type="text" name="row2" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" name="row3" /></td>
+                  <td><input type="number" name="row3" /></td>
+                  <td><input type="text" name="row3" /></td>
+                  <td><input type="text" name="row3" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" name="row4" /></td>
+                  <td><input type="number" name="row4" /></td>
+                  <td><input type="text" name="row4" /></td>
+                  <td><input type="text" name="row4" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" name="row5" /></td>
+                  <td><input type="number" name="row5" /></td>
+                  <td><input type="text" name="row5" /></td>
+                  <td><input type="text" name="row5" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" name="row6" /></td>
+                  <td><input type="number" name="row6" /></td>
+                  <td><input type="text" name="row6" /></td>
+                  <td><input type="text" name="row6" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" name="row7" /></td>
+                  <td><input type="number" name="row7" /></td>
+                  <td><input type="text" name="row7" /></td>
+                  <td><input type="text" name="row7" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" name="row8" /></td>
+                  <td><input type="number" name="row8" /></td>
+                  <td><input type="text" name="row8" /></td>
+                  <td><input type="text" name="row8" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" name="row9" /></td>
+                  <td><input type="number" name="row9" /></td>
+                  <td><input type="text" name="row9" /></td>
+                  <td><input type="text" name="row9" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" name="row10" /></td>
+                  <td><input type="number" name="row10" /></td>
+                  <td><input type="text" name="row10" /></td>
+                  <td><input type="text" name="row10" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" name="row11" /></td>
+                  <td><input type="number" name="row11" /></td>
+                  <td><input type="text" name="row11" /></td>
+                  <td><input type="text" name="row11" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" name="row12" /></td>
+                  <td><input type="number" name="row12" /></td>
+                  <td><input type="text" name="row12" /></td>
+                  <td><input type="text" name="row12" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" name="row13" /></td>
+                  <td><input type="number" name="row13" /></td>
+                  <td><input type="text" name="row13" /></td>
+                  <td><input type="text" name="row13" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="textBox">
+            <label for="condemnationDetails">Condemnations/Deficiencies</label>
+            <br />
+            <textarea
+              name="condemnationDetails"
+              id="condemnationDetails"
+              rows="5"
+              placeholder="Enter description of condemnations and/or deficiencies..."
+              required
+            ></textarea>
+          </div>
+        </div>
+        <div class="button">
+          <label for="btn2"></label>
+          <input type="submit" name="submit" id="btn2" value="Update Work Order" />
+        </div>
+      </form>
+      <p id="log"></p>
+    </div>
+    <script src="update.js"></script>
+  </body>
+</html>
