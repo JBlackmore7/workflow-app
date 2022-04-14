@@ -3,7 +3,7 @@ const headers = {
   workorderType: "Type",
   date: "Date",
   details: "Details",
-  action: "Action",
+  action: "Job Number",
 };
 
 async function loadIntoTable(url, table) {
@@ -27,17 +27,19 @@ async function loadIntoTable(url, table) {
   // Populate the rows
   for (const row of createOrder) {
     const rowElement = document.createElement("tr");
-    var btn = document.createElement("button");
-    btn.setAttribute("type", "button");
-    btn.classList.add("tableButton");
-    btn.textContent = "Edit";
+    var jobNumber = document.createElement("input");
+    jobNumber.setAttribute("type", "text");
+    jobNumber.placeholder = "Enter Job Number";
+    var checkMark = document.createElement("span");
+    checkMark.innerHTML = "&check;";
 
     Object.keys(headers).forEach((element) => {
       const cellElement = document.createElement("td");
 
       cellElement.textContent = row[element];
       rowElement.appendChild(cellElement);
-      cellElement.appendChild(btn);
+      cellElement.appendChild(jobNumber);
+      cellElement.appendChild(checkMark);
     });
 
     tableBody.appendChild(rowElement);
