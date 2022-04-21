@@ -29,10 +29,26 @@ async function loadIntoTable(url, table) {
     const rowElement = document.createElement("tr");
     var jobNumber = document.createElement("input");
     jobNumber.setAttribute("type", "text");
+    jobNumber.style.maxWidth = "75%";
     jobNumber.placeholder = "Enter Job Number";
-    var checkMark = document.createElement("span");
+    var checkMark = document.createElement("a");
     checkMark.innerHTML = "&check;";
-
+    checkMark.onclick = function () {
+      fetch("http://localhost:3000/createOrder/1", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(jobNumber),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    };
     Object.keys(headers).forEach((element) => {
       const cellElement = document.createElement("td");
 
