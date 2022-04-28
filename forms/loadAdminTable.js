@@ -5,12 +5,14 @@ const headers = {
   details: "Details",
   action: "Job Number",
 };
+var localWorkorderRef = [];
 
 async function loadIntoTable(url, table) {
   const tableHead = table.querySelector("thead");
   const tableBody = table.querySelector("tbody");
   const response = await fetch(url);
   const createOrder = await response.json();
+  localWorkorderRef = createOrder;
 
   // Clear the table
   tableHead.innerHTML = "<tr></tr>";
@@ -27,19 +29,23 @@ async function loadIntoTable(url, table) {
   // Populate the rows
   for (const row of createOrder) {
     const rowElement = document.createElement("tr");
-    var jobNumber = document.createElement("input");
+    let jobNumber = document.createElement("input");
     jobNumber.setAttribute("type", "text");
     jobNumber.style.maxWidth = "75%";
     jobNumber.placeholder = "Enter Job Number";
-    var checkMark = document.createElement("a");
+    let checkMark = document.createElement("a");
     checkMark.innerHTML = "&check;";
-    checkMark.onclick = function () {
-      fetch("http://localhost:3000/createOrder/1", {
+    checkMark.setAttribute("workorder_id", row.id);
+    checkMark.onclick = function (event) {
+      let jobNum = event.currentTarget.previousElementSibling;
+      let wo = localWorkorderRef.find((elem) => elem.id == event.currentTarget.getAttribute("workorder_id"));
+      wo.jobNumber = jobNum.value;
+      fetch("http://localhost:3000/createOrder/" + row.id, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(jobNumber),
+        body: JSON.stringify(wo),
       })
         .then((response) => response.json())
         .then((data) => {

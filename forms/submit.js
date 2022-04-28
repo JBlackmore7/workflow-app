@@ -13,6 +13,4 @@ function send(e, form) {
     body: formDataJsonString,
   };
   fetch(form.action, fetchOptions);
-
-  console.log("We send post asynchronously (AJAX)");
 }

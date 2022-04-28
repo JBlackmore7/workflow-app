@@ -3,14 +3,17 @@ const headers = {
   workorderType: "Type",
   date: "Date",
   details: "Details",
+  jobNumber: "Job Number",
+  action: "Select",
 };
+var localWorkorderRef = [];
 
 async function loadIntoTable(url, table) {
   const tableHead = table.querySelector("thead");
   const tableBody = table.querySelector("tbody");
   const response = await fetch(url);
-
   const createOrder = await response.json();
+  localWorkorderRef = createOrder;
 
   // Clear the table
   tableHead.innerHTML = "<tr></tr>";
@@ -27,16 +30,21 @@ async function loadIntoTable(url, table) {
   // Populate the rows
   for (const row of createOrder) {
     const rowElement = document.createElement("tr");
-
+    let serviceWork = document.createElement("a");
+    serviceWork.innerHTML = "Start Job";
+    serviceWork.setAttribute("workorder_id", row.id);
+    serviceWork.onclick = function (event) {
+      serviceWork.href = "serviceForm.html?workorder_id=" + row.id;
+    };
     Object.keys(headers).forEach((element) => {
       const cellElement = document.createElement("td");
-
       cellElement.textContent = row[element];
       rowElement.appendChild(cellElement);
+      cellElement.appendChild(serviceWork);
     });
 
     tableBody.appendChild(rowElement);
   }
 }
 
-loadIntoTable("http://localhost:3000/adminInput", document.querySelector("table"));
+loadIntoTable("http://localhost:3000/createOrder", document.querySelector("table"));

@@ -1,9 +1,6 @@
 {
   "createOrder": [
     {
-      "id": 1
-    },
-    {
       "contactName": "Jared Blackmore",
       "companyName": "The Antidote",
       "contactNumber": "7096998777",
@@ -15,7 +12,8 @@
       "employeeName": "Gord Reid",
       "date": "2022-03-02",
       "submit": "Create",
-      "id": 3
+      "id": 3,
+      "jobNumber": "55455"
     },
     {
       "contactName": "Jared Blackmore",
@@ -29,7 +27,8 @@
       "employeeName": "Gord Reid",
       "date": "2022-03-21",
       "submit": "Create",
-      "id": 4
+      "id": 4,
+      "jobNumber": "12345"
     },
     {
       "contactName": "Jared Blackmore",
@@ -42,7 +41,8 @@
       "workorderType": "inspection",
       "employeeName": "Gord Reid",
       "date": "2022-03-21",
-      "id": 13
+      "id": 13,
+      "jobNumber": "99987"
     }
   ],
   "adminInput": [],
