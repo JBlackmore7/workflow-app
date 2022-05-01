@@ -31,18 +31,6 @@ body {
   font-weight: 600;
   position: relative;
 }
-.container .title::before,
-.adminContainer .title::before,
-.serviceContainer .title::before {
-  content: "";
-  position: absolute;
-  height: 4px;
-  width: 75px;
-  left: 0;
-  bottom: 0;
-  border-radius: 8px;
-  background-color: rgb(52, 75, 117);
-}
 .container form .formDetails,
 .adminContainer form .adminDetails,
 .serviceContainer form .serviceDetails {
@@ -91,19 +79,36 @@ input {
   padding-left: 3px;
   font-size: 14px;
 }
+.serviceDetails .truckStock {
+  margin-bottom: 10px;
+}
 .serviceDetails .materialsTable {
   margin-bottom: 10px;
   width: 100%;
 }
-.serviceDetails .materialsTable table {
+.serviceDetails .materialsTable table.materials {
   table-layout: fixed;
   width: 100%;
   border: solid 1px black;
-  border-radius: 8px;
-  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
   padding: 2px;
 }
 
+.serviceDetails .materialsTable table tbody tr td input {
+  border-radius: 5px;
+}
+
+.serviceDetails .materialsTable table thead th:nth-child(1) {
+  width: 10%;
+}
+
+.serviceDetails .materialsTable table thead th:nth-child(2) {
+  width: 35%;
+}
+
+.serviceDetails .materialsTable table thead th:nth-child(3) {
+  width: 55%;
+}
 
 form .button {
   height: 30px;

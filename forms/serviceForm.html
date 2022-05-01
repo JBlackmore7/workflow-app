@@ -9,7 +9,7 @@
   <body>
     <div class="serviceContainer">
       <div class="title">Service Work</div>
-      <form action="http://localhost:3000/createOrder/posts" method="put" id="serviceWork">
+      <form action="" name="serviceWork" class="serviceWork" id="serviceWork">
         <div class="serviceDetails">
           <div class="textBox">
             <label for="serviceDetails">Description of Work Performed</label>
@@ -22,12 +22,25 @@
               required
             ></textarea>
           </div>
+          <div class="truckStock">
+            <label for="truckStock">Truck Number/Stock</label>
+            <select name="truckStock" id="truckStock" required>
+              <option value="">Please choose an option</option>
+              <option value="Shop">Service Shop</option>
+              <option value="CVS977">CVS977 - Caravan</option>
+              <option value="CVS978">CVS978 - Caravan</option>
+              <option value="JJN018">JJN018 - Quad Cab</option>
+              <option value="JKA363">JKA363 - ProMaster</option>
+              <option value="CDA514">CDA514 - Mercedes</option>
+              <option value="JGB245">JGB245 - Colorado</option>
+            </select>
+          </div>
           <div class="materialsTable">
             <label for="materialsTable">Materials/Labor</label>
-            <table>
+            <br />
+            <table id="materials" class="materials" name="materials">
               <thead>
                 <tr>
-                  <th>Truck Number</th>
                   <th>Quantity</th>
                   <th>Part Number</th>
                   <th>Description</th>
@@ -35,18 +48,17 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><input type="text" name="row1" /></td>
-                  <td><input type="number" name="row1" /></td>
-                  <td><input type="text" name="row1" /></td>
-                  <td><input type="text" name="row1" /></td>
-                </tr>
-                <tr>
-                  <td><input type="text" name="row2" /></td>
-                  <td><input type="number" name="row2" /></td>
-                  <td><input type="text" name="row2" /></td>
-                  <td><input type="text" name="row2" /></td>
+                  <td id="col0"><input type="number" name="quantity" /></td>
+                  <td id="col1"><input type="text" name="partNumber" /></td>
+                  <td id="col2"><input type="text" name="partDescription" /></td>
                 </tr>
               </tbody>
+            </table>
+            <table class="addRow">
+              <tr>
+                <td><input type="button" value="Add Row" onclick="addRows()" /></td>
+                <td><input type="button" value="Delete Row" onclick="deleteRows()" /></td>
+              </tr>
             </table>
           </div>
           <div class="textBox">

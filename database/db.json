@@ -2,21 +2,6 @@
   "createOrder": [
     {
       "contactName": "Jared Blackmore",
-      "companyName": "The Antidote",
-      "contactNumber": "7096998777",
-      "companyAddress": "35 Spratt Place, St. John's, NL",
-      "contactEmail": "jblackmore17@gmail.com",
-      "workSite": "N/A",
-      "details": "(2) 10lb CO2 Extinguishers",
-      "workorderType": "service",
-      "employeeName": "Gord Reid",
-      "date": "2022-03-02",
-      "submit": "Create",
-      "id": 3,
-      "jobNumber": "55455"
-    },
-    {
-      "contactName": "Jared Blackmore",
       "companyName": "JJB Enterprises",
       "contactNumber": "7096998777",
       "companyAddress": "5 Raleigh Street, St. John's, NL, Canada",
@@ -43,6 +28,15 @@
       "date": "2022-03-21",
       "id": 13,
       "jobNumber": "99987"
+    },
+    {
+      "serviceDetails": "",
+      "truckStock": "",
+      "quantity": "",
+      "partNumber": "",
+      "partDescription": "",
+      "condemnationDetails": "",
+      "id": 14
     }
   ],
   "adminInput": [],
