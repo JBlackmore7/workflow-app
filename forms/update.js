@@ -1,10 +1,10 @@
 let createOrder;
 
-const urlSearchParams = new URLSearchParams(window.location.search);
-const workorder_id = urlSearchParams.get("workorder_id");
-
 window.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
+
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const workorder_id = urlSearchParams.get("workorder_id");
 
   fetch("http://localhost:3000/createOrder/" + workorder_id)
     .then((response) => response.json())
@@ -17,35 +17,19 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
 });
 
-/*
-let formData = new FormData(serviceWork);
-const formElem = document.querySelector("form");
-
-formElem.addEventListener("submit", (e) => {
+function handleSubmit(e) {
   e.preventDefault();
 
-  fetch("http://localhost:3000/createOrder/" + workorder_id, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(Object.fromEntries(formData.entries())),
-  });
-});
-*/
+  const serviceData = new FormData(e.target);
 
-function submitForm(event) {
-  // Prevent the form from submitting.
-  event.preventDefault();
-  // Set url for submission and collect data.
-  const url = "http://localhost:3000/createOrder/" + workorder_id;
-  const formData = new FormData(event.target);
-  // Build the data object.
-  const data = {};
-  formData.forEach((value, key) => (data[key] = value));
-  // Log the data.
-  console.log(data);
+  let object = {};
+  serviceData.forEach((value, key) => (object[key] = value));
+  let json = JSON.stringify(object);
+  console.log(json);
 }
+
+const form = document.querySelector("form");
+form.addEventListener("submit", handleSubmit);
 
 function addRows() {
   var table = document.getElementById("materials");
