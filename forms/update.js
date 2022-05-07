@@ -15,21 +15,25 @@ window.addEventListener("DOMContentLoaded", (event) => {
     .catch((error) => {
       console.error("Error:", error);
     });
+
+  const form = document.querySelector("form");
+  form.addEventListener("submit", handleSubmit);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const serviceData = new FormData(e.target);
+
+    let object = {};
+    serviceData.forEach((value, key) => (object[key] = value));
+    let json = JSON.stringify(object);
+    console.log(json);
+
+    const table = document.querySelector("table");
+    const arr = [...table.rows].map((r) => [...r.querySelectorAll("td, th")].map((td) => td.textContent));
+    console.log(arr);
+  }
 });
-
-function handleSubmit(e) {
-  e.preventDefault();
-
-  const serviceData = new FormData(e.target);
-
-  let object = {};
-  serviceData.forEach((value, key) => (object[key] = value));
-  let json = JSON.stringify(object);
-  console.log(json);
-}
-
-const form = document.querySelector("form");
-form.addEventListener("submit", handleSubmit);
 
 function addRows() {
   var table = document.getElementById("materials");
@@ -39,6 +43,7 @@ function addRows() {
   for (var i = 0; i < cellCount; i++) {
     var cell = "cell" + i;
     cell = row.insertCell(i);
+
     var copyCell = document.getElementById("col" + i).innerHTML;
     cell.innerHTML = copyCell;
   }
