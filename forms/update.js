@@ -26,12 +26,39 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     let object = {};
     serviceData.forEach((value, key) => (object[key] = value));
+    serviceData.delete();
     let json = JSON.stringify(object);
     console.log(json);
 
-    const table = document.querySelector("table");
-    const arr = [...table.rows].map((r) => [...r.querySelectorAll("td, th")].map((td) => td.textContent));
-    console.log(arr);
+    let q = serviceData.getAll("quantity");
+    let pn = serviceData.getAll("partNumber");
+    let pd = serviceData.getAll("partDescription");
+
+    let arr = [];
+    for (var i = 0; i < q.length; i++) {
+      arr[i] = { quantity: q[i], partNumber: pn[i], partDescription: pd[i] };
+    }
+
+    let jsonArray = JSON.stringify(arr);
+    console.log(jsonArray);
+
+    json = json.concat(jsonArray);
+    console.log(json);
+
+    /*fetch("http://localhost:3000/createOrder/" + workorder_id, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(wo),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });*/
   }
 });
 
