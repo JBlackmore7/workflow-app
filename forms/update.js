@@ -25,8 +25,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const serviceData = new FormData(e.target);
 
     let object = {};
+    serviceData.delete("materials");
     serviceData.forEach((value, key) => (object[key] = value));
-    serviceData.delete();
     let json = JSON.stringify(object);
     console.log(json);
 
@@ -45,20 +45,23 @@ window.addEventListener("DOMContentLoaded", (event) => {
     json = json.concat(jsonArray);
     console.log(json);
 
-    /*fetch("http://localhost:3000/createOrder/" + workorder_id, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(wo),
+    let combined = createOrder.concat(json);
+    console.log(combined);
+
+    fetch("http://localhost:3000/createOrder/" + workorder_id, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(combined),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
       })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Success:", data);
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        });*/
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   }
 });
 
