@@ -27,7 +27,39 @@
       "employeeName": "Gord Reid",
       "date": "2022-03-21",
       "id": 13,
-      "jobNumber": "99987"
+      "jobNumber": "99987",
+      "service": {
+        "serviceDetails": "test",
+        "truckStock": "Shop",
+        "condemnationDetails": "test",
+        "parts": [
+          {
+            "quantity": "11",
+            "partNumber": "test",
+            "partDescription": "test"
+          },
+          {
+            "quantity": "22",
+            "partNumber": "dfgdf",
+            "partDescription": "sdfsdfs"
+          },
+          {
+            "quantity": "33",
+            "partNumber": "test part number",
+            "partDescription": "test part description"
+          },
+          {
+            "quantity": "44",
+            "partNumber": "T10CO2HR",
+            "partDescription": "H-Test + R/C - 10LB CO2"
+          },
+          {
+            "quantity": "55",
+            "partNumber": "hahahaha",
+            "partDescription": "hahahaha"
+          }
+        ]
+      }
     },
     {
       "serviceDetails": "",
