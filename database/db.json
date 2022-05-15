@@ -27,7 +27,36 @@
       "employeeName": "Gord Reid",
       "date": "2022-03-21",
       "id": 13,
-      "jobNumber": "99987",
+      "jobNumber": "99987"
+    },
+    {
+      "contactName": "Keri Blackmore",
+      "companyName": "KAB Enterprises",
+      "contactNumber": "17096995918",
+      "companyAddress": "5 Raleigh Street, St. John's, NL",
+      "contactEmail": "kerblackmore@gmail.com",
+      "workSite": "N/A",
+      "details": "test",
+      "workorderType": "warrantyRepair",
+      "employeeName": "Gord Reid",
+      "date": "2022-05-16",
+      "id": 16
+    }
+  ],
+  "completeOrder": [
+    {
+      "contactName": "Jared Blackmore",
+      "companyName": "JJB Enterprises",
+      "contactNumber": "7096998777",
+      "companyAddress": "5 Raleigh Street, St. John's, NL, Canada",
+      "contactEmail": "jblackmore17@gmail.com",
+      "workSite": "na",
+      "details": "asdgasdgsadg",
+      "workorderType": "warehouseTransfer",
+      "employeeName": "Jared Blackmore",
+      "date": "2022-05-15",
+      "id": 15,
+      "jobNumber": "84576",
       "service": {
         "serviceDetails": "test",
         "truckStock": "Shop",
@@ -47,31 +76,9 @@
             "quantity": "33",
             "partNumber": "test part number",
             "partDescription": "test part description"
-          },
-          {
-            "quantity": "44",
-            "partNumber": "T10CO2HR",
-            "partDescription": "H-Test + R/C - 10LB CO2"
-          },
-          {
-            "quantity": "55",
-            "partNumber": "hahahaha",
-            "partDescription": "hahahaha"
           }
         ]
       }
-    },
-    {
-      "serviceDetails": "",
-      "truckStock": "",
-      "quantity": "",
-      "partNumber": "",
-      "partDescription": "",
-      "condemnationDetails": "",
-      "id": 14
     }
-  ],
-  "adminInput": [],
-  "serviceWork": [],
-  "completeOrder": []
+  ]
 }

@@ -15,7 +15,8 @@ body {
 }
 .container,
 .adminContainer,
-.serviceContainer {
+.serviceContainer,
+.historyContainer {
   max-width: 960px;
   width: 100%;
   background: #fff;
@@ -26,7 +27,8 @@ body {
 }
 .container .title,
 .adminContainer .title,
-.serviceContainer .title {
+.serviceContainer .title,
+.historyContainer .title {
   font-size: 25px;
   font-weight: 600;
   position: relative;
@@ -139,6 +141,7 @@ form .button input {
   background-color: rgb(52, 75, 117);
   color: #fff;
   text-align: left;
+  font-weight: 550;
 }
 .tableContent th,td {
   padding: 5px 5px;

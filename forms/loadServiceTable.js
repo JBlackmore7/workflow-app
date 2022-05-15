@@ -29,19 +29,21 @@ async function loadIntoTable(url, table) {
 
   // Populate the rows
   for (const row of createOrder) {
-    const rowElement = document.createElement("tr");
-    let serviceWork = document.createElement("a");
-    serviceWork.innerHTML = "Start Job";
-    serviceWork.setAttribute("workorder_id", row.id);
-    serviceWork.href = "serviceForm.html?workorder_id=" + row.id;
-    Object.keys(headers).forEach((element) => {
-      const cellElement = document.createElement("td");
-      cellElement.textContent = row[element];
-      rowElement.appendChild(cellElement);
-      cellElement.appendChild(serviceWork);
-    });
+    if (row.jobNumber != null) {
+      const rowElement = document.createElement("tr");
+      let serviceWork = document.createElement("a");
+      serviceWork.innerHTML = "Start Job";
+      serviceWork.setAttribute("workorder_id", row.id);
+      serviceWork.href = "serviceForm.html?workorder_id=" + row.id;
+      Object.keys(headers).forEach((element) => {
+        const cellElement = document.createElement("td");
+        cellElement.textContent = row[element];
+        rowElement.appendChild(cellElement);
+        cellElement.appendChild(serviceWork);
+      });
 
-    tableBody.appendChild(rowElement);
+      tableBody.appendChild(rowElement);
+    }
   }
 }
 

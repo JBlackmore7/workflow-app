@@ -38,26 +38,25 @@ window.addEventListener("DOMContentLoaded", (event) => {
       arr[i] = { quantity: q[i], partNumber: pn[i], partDescription: pd[i] };
     }
     object.parts = arr;
-    object["parts"] = arr;
 
     createOrder.service = object;
     let json = JSON.stringify(createOrder);
     console.log(json);
 
-    fetch("http://localhost:3000/createOrder/" + workorder_id, {
-      method: "PUT",
+    fetch("http://localhost:3000/completeOrder/", {
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: json,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success:", data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+    });
+
+    fetch("http://localhost:3000/createOrder/" + workorder_id, {
+      method: "DELETE",
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
   }
 });
 
