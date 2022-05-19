@@ -33,7 +33,7 @@ async function loadIntoTable(url, table) {
     let history = document.createElement("button");
     history.innerHTML = "View";
     history.setAttribute("workorder_id", row.id);
-    history.href = "history.html?workorder_id=" + row.id;
+    //history.href = "history.html?workorder_id=" + row.id;
     Object.keys(headers).forEach((element) => {
       const cellElement = document.createElement("td");
       cellElement.textContent = row[element];
@@ -46,3 +46,20 @@ async function loadIntoTable(url, table) {
 }
 
 loadIntoTable("http://localhost:3000/completeOrder", document.querySelector("table"));
+
+const modals = document.querySelectorAll("[data-modal]");
+
+modals.forEach(function (trigger) {
+  trigger.addEventListener("click", function (event) {
+    event.preventDefault();
+    const modal = document.getElementById(trigger.dataset.modal);
+    modal.classList.add("open");
+    const exits = modal.querySelectorAll(".modal-exit");
+    exits.forEach(function (exit) {
+      exit.addEventListener("click", function (event) {
+        event.preventDefault();
+        modal.classList.remove("open");
+      });
+    });
+  });
+});
