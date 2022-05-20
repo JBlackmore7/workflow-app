@@ -7,15 +7,21 @@ body {
 }
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 15px 10px;
   background-color: rgb(52, 75, 117);
+  justify-content: space-between;
 }
 
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #ecf0f1;
+  text-decoration: none;
+}
 li,
 a,
-button {
+button, ul {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
