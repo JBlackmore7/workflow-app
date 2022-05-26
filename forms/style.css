@@ -155,8 +155,8 @@ form .button input {
 #modal {
   display: none;
   position: absolute;
-  width: 40vw;
-  height: 30vh;
+  width: 40%;
+  height: 30%;
   left: 50%;
   top: 50%; 
   transform: translate(-50%, -50%);

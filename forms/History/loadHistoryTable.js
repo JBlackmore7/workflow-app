@@ -27,10 +27,6 @@ async function loadIntoTable(url, table) {
     tableHead.querySelector("tr").appendChild(headerElement);
   });
 
-  function showModal() {
-    document.getElementById("modal").style.display = "block";
-  }
-
   // Populate the rows
   for (const row of completeOrder) {
     const rowElement = document.createElement("tr");
@@ -48,6 +44,13 @@ async function loadIntoTable(url, table) {
     });
 
     tableBody.appendChild(rowElement);
+  }
+
+  // Modal Configuring
+  function showModal() {
+    document.getElementById("modal").style.display = "block";
+    document.getElementById("companyName").innerHTML =
+      "Company Name: " + localWorkorderRef.find((e) => e.name === "companyName");
   }
 
   let closeButton = document.getElementById("closeModal");
