@@ -14,6 +14,20 @@
         <tbody></tbody>
       </table>
     </div>
+    <div id="modal-area">
+      <div id="modal">
+        <h1 id="modal-header"></h1>
+        <p>Some text</p>
+        <div>
+          <button id="closeModal" onclick="closeModal()"></button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+    </script>
     <script src="loadHistoryTable.js"></script>
   </body>
 </html>

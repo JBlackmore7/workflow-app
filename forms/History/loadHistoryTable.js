@@ -27,13 +27,19 @@ async function loadIntoTable(url, table) {
     tableHead.querySelector("tr").appendChild(headerElement);
   });
 
+  function showModal() {
+    document.getElementById("modal").style.display = "block";
+  }
+
   // Populate the rows
   for (const row of completeOrder) {
     const rowElement = document.createElement("tr");
-    let history = document.createElement("a");
+    let history = document.createElement("button");
     history.innerHTML = "View";
     history.setAttribute("workorder_id", row.id);
-    history.href = "historyDisplay.html?workorder_id=" + row.id;
+    history.onclick = showModal;
+    let h1 = document.getElementById("modal-header");
+    h1.innerHTML = "Work Order #" + row.id;
     Object.keys(headers).forEach((element) => {
       const cellElement = document.createElement("td");
       cellElement.textContent = row[element];
@@ -43,6 +49,9 @@ async function loadIntoTable(url, table) {
 
     tableBody.appendChild(rowElement);
   }
+
+  let closeButton = document.getElementById("closeModal");
+  closeButton.innerHTML = "&#10006";
 }
 
 loadIntoTable("http://localhost:3000/completeOrder", document.querySelector("table"));

@@ -152,3 +152,19 @@ form .button input {
 .tableContent tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
 }
+#modal {
+  display: none;
+  position: absolute;
+  width: 40vw;
+  height: 30vh;
+  left: 50%;
+  top: 50%; 
+  transform: translate(-50%, -50%);
+  background-color: #eee;
+  padding: 1.4rem;
+}
+#closeModal {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
