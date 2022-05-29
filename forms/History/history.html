@@ -9,42 +9,36 @@
   <body>
     <div class="historyContainer">
       <div class="title">Completed Work Orders</div>
-      <table name="table" class="tableContent" id="historyTable">
+      <table name="tabworkSitele" class="tableContent" id="historyTable">
         <thead></thead>
         <tbody></tbody>
       </table>
     </div>
-    <div id="modal-area">
-      <div id="modal">
-        <h1 id="modal-header"></h1>
+    <div id="modal" class="modal">
+      <div class="modal-header">
+        <div id="modal-title" class="modal-title"></div>
+        <button data-close-button class="close-button">&#10006</button>
+      </div>
+      <div id="modal-body" class="modal-body">
         <h2>Client Information</h2>
-        <span id="companyName">Company Name:</span>
-        <span id="companyAddress">Company Address:</span>
-        <span id="workSite">Work Site:</span>
-        <br />
-        <span id="contactName">Contact Name:</span>
-        <span id="contactNumber">Contact Number:</span>
-        <span id="contactEmail">Contact Email:</span>
-        <br />
-        <span id="orderDetails">Order Details:</span>
-        <span id="date">Date:</span>
-        <span id="createdBy">Created By:</span>
+        <div id="companyName">Company Name:</div>
+        <div id="companyAddress">Company Address:</div>
+        <div id="workSite">Work Site:</div>
+        <div id="contactName">Contact Name:</div>
+        <div id="contactNumber">Contact Number:</div>
+        <div id="contactEmail">Contact Email:</div>
+        <div id="orderDetails">Order Details:</div>
+        <div id="date">Date:</div>
+        <div id="createdBy">Created By:</div>
         <h2>Service Information</h2>
-        <span id="serviceDetails">Service Details:</span>
-        <span id="jobNumber">Job Number:</span>
-        <span id="notes">Deficiencies/Condemnations:</span>
-        <span id="truckStock">Inventory:</span>
-        <span>Parts:</span>
-        <div>
-          <button id="closeModal" onclick="closeModal()"></button>
-        </div>
+        <div id="serviceDetails">Service Details:</div>
+        <div id="jobNumber">Job Number:</div>
+        <div id="notes">Deficiencies/Condemnations:</div>
+        <div id="truckStock">Inventory:</div>
+        <div>Parts:</div>
       </div>
     </div>
-    <script>
-      function closeModal() {
-        document.getElementById("modal").style.display = "none";
-      }
-    </script>
+    <div id="overlay"></div>
     <script src="loadHistoryTable.js"></script>
   </body>
 </html>

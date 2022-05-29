@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 * {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   display: flex;
   flex-direction: column;
@@ -13,6 +15,7 @@ body {
   align-items: center;
   background-color: rgb(52, 75, 117);
 }
+
 .container,
 .adminContainer,
 .serviceContainer,
@@ -25,6 +28,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
+
 .container .title,
 .adminContainer .title,
 .serviceContainer .title,
@@ -33,6 +37,7 @@ body {
   font-weight: 600;
   position: relative;
 }
+
 .container form .formDetails,
 .adminContainer form .adminDetails,
 .serviceContainer form .serviceDetails {
@@ -41,11 +46,13 @@ body {
   justify-content: space-between;
   margin: 20px 0 12px 0;
 }
+
 .formDetails .inputBox,
 .adminDetails .inputBox {
   width: calc(100% / 2 - 15px);
   margin-bottom: 10px;
 }
+
 .formDetails .inputBox input,
 .adminDetails .inputBox input {
   height: 30px;
@@ -55,10 +62,12 @@ body {
   padding-left: 3px;
   font-size: 14px;
 }
+
 .formDetails .lowerBox {
   width: calc(100% / 3 - 15px);
   margin-bottom: 10px;
 }
+
 .formDetails .lowerBox select,
 input {
   height: 30px;
@@ -67,11 +76,13 @@ input {
   border-radius: 8px;
   padding-left: 3px;
 }
+
 .formDetails .textBox,
 .serviceDetails .textBox {
   width: 100%;
   margin-bottom: 10px;
 }
+
 .formDetails .textBox textarea,
 .serviceDetails .textBox textarea {
   width: 100%;
@@ -81,13 +92,16 @@ input {
   padding-left: 3px;
   font-size: 14px;
 }
+
 .serviceDetails .truckStock {
   margin-bottom: 10px;
 }
+
 .serviceDetails .materialsTable {
   margin-bottom: 10px;
   width: 100%;
 }
+
 .serviceDetails .materialsTable table.materials {
   table-layout: fixed;
   width: 100%;
@@ -116,6 +130,7 @@ form .button {
   height: 30px;
   margin: 10px 0;
 }
+
 form .button input {
   height: 100%;
   width: 100%;
@@ -130,6 +145,7 @@ form .button input {
   color: white;
   background-color: rgb(52, 75, 117);
 }
+
 .tableContent {
   border-collapse: collapse;
   margin: 25px 0;
@@ -137,34 +153,83 @@ form .button input {
   min-width: 400px;
   width: 100%;
 }
+
 .tableContent thead tr th {
   background-color: rgb(52, 75, 117);
   color: #fff;
   text-align: left;
   font-weight: 550;
 }
+
 .tableContent th,td {
   padding: 5px 5px;
 }
+
 .tableContent tbody tr {
   border-bottom: 1px solid #dddddd;
 }
+
 .tableContent tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
 }
-#modal {
-  display: none;
-  position: absolute;
-  width: 40%;
-  height: 30%;
+
+.modal {
+  position: fixed;
+  top: 50%;
   left: 50%;
-  top: 50%; 
-  transform: translate(-50%, -50%);
-  background-color: #eee;
-  padding: 1.4rem;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
 }
-#closeModal {
-  position: absolute;
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
   top: 0;
+  left: 0;
   right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
