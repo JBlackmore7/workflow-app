@@ -33,7 +33,7 @@ async function loadIntoTable(url, table) {
     let history = document.createElement("button");
     history.innerHTML = "View";
     history.setAttribute("workorder_id", row.id);
-    history.setAttribute("data-modal-target", "#modal");
+    history.addEventListener("click", openModal);
     let h1 = document.getElementById("modal-title");
     h1.innerHTML = "Work Order #" + row.id;
     Object.keys(headers).forEach((element) => {
@@ -46,16 +46,7 @@ async function loadIntoTable(url, table) {
     tableBody.appendChild(rowElement);
   }
 
-  const openModalButtons = document.querySelectorAll("[data-modal-target]");
-  const closeModalButtons = document.querySelectorAll("[data-close-button]");
   const overlay = document.getElementById("overlay");
-
-  openModalButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const modal = document.querySelector(button.dataset.modalTarget);
-      openModal(modal);
-    });
-  });
 
   overlay.addEventListener("click", () => {
     const modals = document.querySelectorAll(".modal.active");
@@ -64,21 +55,15 @@ async function loadIntoTable(url, table) {
     });
   });
 
-  closeModalButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const modal = button.closest(".modal");
-      closeModal(modal);
-    });
-  });
-
-  function openModal(modal) {
-    if (modal == null) return;
-    const workorderID = e.currentTarget.getAttribute("workorder_id");
-    const workorderRef = localWorkorderRef.find((e) => e.id == workorderID);
+  function openModal() {
+    modal.classList.add("active");
+    overlay.classList.add("active");
+    const workorderID = event.currentTarget.getAttribute("workorder_id");
+    const workorderRef = localWorkorderRef.find((event) => event.id == workorderID);
     const myHelpfulFunction = (key, value) => (document.getElementById(key).innerHTML += " " + value);
     myHelpfulFunction("companyName", workorderRef.companyName);
     myHelpfulFunction("companyAddress", workorderRef.companyAddress);
-    myHelpfulFunction("workSite", workorderRef.worksite);
+    myHelpfulFunction("workSite", workorderRef.workSite);
     myHelpfulFunction("contactName", workorderRef.contactName);
     myHelpfulFunction("contactNumber", workorderRef.contactNumber);
     myHelpfulFunction("contactEmail", workorderRef.contactEmail);
@@ -89,14 +74,6 @@ async function loadIntoTable(url, table) {
     myHelpfulFunction("jobNumber", workorderRef.jobNumber);
     myHelpfulFunction("notes", workorderRef.service.condemnationDetails);
     myHelpfulFunction("truckStock", workorderRef.service.truckStock);
-    modal.classList.add("active");
-    overlay.classList.add("active");
-  }
-
-  function closeModal(modal) {
-    if (modal == null) return;
-    modal.classList.remove("active");
-    overlay.classList.remove("active");
   }
 }
 

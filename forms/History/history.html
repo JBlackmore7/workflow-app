@@ -9,7 +9,7 @@
   <body>
     <div class="historyContainer">
       <div class="title">Completed Work Orders</div>
-      <table name="tabworkSitele" class="tableContent" id="historyTable">
+      <table name="historyTable" class="tableContent" id="historyTable">
         <thead></thead>
         <tbody></tbody>
       </table>
@@ -17,7 +17,7 @@
     <div id="modal" class="modal">
       <div class="modal-header">
         <div id="modal-title" class="modal-title"></div>
-        <button data-close-button class="close-button">&#10006</button>
+        <button id="close-button" onclick="closeModal()" class="close-button">&#10006</button>
       </div>
       <div id="modal-body" class="modal-body">
         <h2>Client Information</h2>
@@ -39,6 +39,12 @@
       </div>
     </div>
     <div id="overlay"></div>
+    <script>
+      function closeModal() {
+        modal.classList.remove("active");
+        overlay.classList.remove("active");
+      }
+    </script>
     <script src="loadHistoryTable.js"></script>
   </body>
 </html>
