@@ -79,6 +79,32 @@
           }
         ]
       }
+    },
+    {
+      "contactName": "Keri Blackmore",
+      "companyName": "Verafin",
+      "contactNumber": "1234567",
+      "companyAddress": "123 Verafin Way",
+      "contactEmail": "keri.blackmore@verafin.com",
+      "workSite": "The Verafin Express",
+      "details": "Computers",
+      "workorderType": "newInstall",
+      "employeeName": "Keri Blackmore",
+      "date": "2022-05-31",
+      "id": 17,
+      "jobNumber": "12345",
+      "service": {
+        "serviceDetails": "Plug in computers",
+        "truckStock": "JJN018",
+        "condemnationDetails": "None",
+        "parts": [
+          {
+            "quantity": "500",
+            "partNumber": "2",
+            "partDescription": "Specific computers"
+          }
+        ]
+      }
     }
   ]
 }
