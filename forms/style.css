@@ -179,7 +179,6 @@ form .button input {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
-  border: 1px solid black;
   border-radius: 10px;
   z-index: 10;
   background-color: white;
@@ -196,12 +195,18 @@ form .button input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black;
+  color: #fff;
+  background-color: rgb(52, 75, 117);
+  border-radius: 10px 10px 0 0;
+}
+
+.close-button {
+  color: #fff;
 }
 
 .modal-header .title {
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 300;
 }
 
 .modal-header .close-button {
@@ -232,4 +237,18 @@ form .button input {
 #overlay.active {
   opacity: 1;
   pointer-events: all;
+}
+
+.modalList {
+  list-style: none;
+}
+
+.modalTitle {
+  align-content: center;
+}
+
+.modalLabel {
+  display: inline-block;
+  width: 165px;
+
 }

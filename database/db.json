@@ -6,28 +6,13 @@
       "contactNumber": "7096998777",
       "companyAddress": "5 Raleigh Street, St. John's, NL, Canada",
       "contactEmail": "jblackmore17@gmail.com",
-      "workSite": "na",
-      "details": "test",
-      "workorderType": "newInstall",
-      "employeeName": "Gord Reid",
-      "date": "2022-03-21",
-      "submit": "Create",
-      "id": 4,
-      "jobNumber": "45554"
-    },
-    {
-      "contactName": "Jared Blackmore",
-      "companyName": "JJB Enterprises",
-      "contactNumber": "7096998777",
-      "companyAddress": "5 Raleigh Street, St. John's, NL, Canada",
-      "contactEmail": "jblackmore17@gmail.com",
       "workSite": "N/A",
       "details": "test",
       "workorderType": "inspection",
       "employeeName": "Gord Reid",
       "date": "2022-03-21",
       "id": 13,
-      "jobNumber": "99987"
+      "jobNumber": ""
     },
     {
       "contactName": "Keri Blackmore",
@@ -102,6 +87,33 @@
             "quantity": "500",
             "partNumber": "2",
             "partDescription": "Specific computers"
+          }
+        ]
+      }
+    },
+    {
+      "contactName": "Jared Blackmore",
+      "companyName": "JJB Enterprises",
+      "contactNumber": "7096998777",
+      "companyAddress": "5 Raleigh Street, St. John's, NL, Canada",
+      "contactEmail": "jblackmore17@gmail.com",
+      "workSite": "na",
+      "details": "test",
+      "workorderType": "newInstall",
+      "employeeName": "Gord Reid",
+      "date": "2022-03-21",
+      "submit": "Create",
+      "id": 4,
+      "jobNumber": "45554",
+      "service": {
+        "serviceDetails": "test",
+        "truckStock": "Shop",
+        "condemnationDetails": "test",
+        "parts": [
+          {
+            "quantity": "4",
+            "partNumber": "test",
+            "partDescription": "test"
           }
         ]
       }

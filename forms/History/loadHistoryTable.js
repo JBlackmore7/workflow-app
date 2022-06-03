@@ -34,8 +34,6 @@ async function loadIntoTable(url, table) {
     history.innerHTML = "View";
     history.setAttribute("workorder_id", row.id);
     history.addEventListener("click", openModal);
-    let h1 = document.getElementById("modal-title");
-    h1.innerHTML = "Work Order #" + row.id;
     Object.keys(headers).forEach((element) => {
       const cellElement = document.createElement("td");
       cellElement.textContent = row[element];
@@ -55,12 +53,19 @@ async function loadIntoTable(url, table) {
     });
   });
 
-  function openModal() {
+  function openModal(event) {
     modal.classList.add("active");
     overlay.classList.add("active");
+
     const workorderID = event.currentTarget.getAttribute("workorder_id");
+    let h1 = document.getElementById("modal-title");
+    h1.innerHTML = "Work Order #" + workorderID;
+    h1.style.fontSize = "28px";
+    h1.style.fontWeight = "550";
     const workorderRef = localWorkorderRef.find((event) => event.id == workorderID);
-    const myHelpfulFunction = (key, value) => (document.getElementById(key).innerHTML += " " + value);
+
+    const myHelpfulFunction = (key, value) => (document.querySelector(`#${key} .modalValue`).innerHTML = value);
+
     myHelpfulFunction("companyName", workorderRef.companyName);
     myHelpfulFunction("companyAddress", workorderRef.companyAddress);
     myHelpfulFunction("workSite", workorderRef.workSite);
@@ -74,6 +79,17 @@ async function loadIntoTable(url, table) {
     myHelpfulFunction("jobNumber", workorderRef.jobNumber);
     myHelpfulFunction("notes", workorderRef.service.condemnationDetails);
     myHelpfulFunction("truckStock", workorderRef.service.truckStock);
+
+    /*const parts = workorderRef.service.parts;
+    const table = document.getElementById("materialsTable");
+    for (let row of parts) {
+      table.insertRow();
+      for (let cell of row) {
+        let newCell = table.rows[table.rows.length - 1].insertCell();
+        newCell.textContent = cell;
+      }
+    }
+    document.body.appendChild(table);*/
   }
 }
 
