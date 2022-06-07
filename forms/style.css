@@ -241,14 +241,31 @@ form .button input {
 
 .modalList {
   list-style: none;
+  padding: 5px 0;
 }
 
 .modalTitle {
   align-content: center;
 }
 
+.modalText {
+  padding: 2px 1px
+}
+
 .modalLabel {
   display: inline-block;
   width: 165px;
 
+}
+
+#materialsTable {
+  margin: 5px 0;
+}
+
+#log {
+  display: none;
+}
+
+#log.show {
+  display: block;
 }

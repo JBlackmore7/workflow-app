@@ -13,4 +13,7 @@ function send(e, form) {
     body: formDataJsonString,
   };
   fetch(form.action, fetchOptions);
+  const submitMessage = document.querySelector("#log");
+  submitMessage.classList.add("show");
+  setTimeout(() => form.submit(), 2000);
 }

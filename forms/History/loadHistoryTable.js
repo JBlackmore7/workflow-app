@@ -80,16 +80,15 @@ async function loadIntoTable(url, table) {
     myHelpfulFunction("notes", workorderRef.service.condemnationDetails);
     myHelpfulFunction("truckStock", workorderRef.service.truckStock);
 
-    /*const parts = workorderRef.service.parts;
-    const table = document.getElementById("materialsTable");
-    for (let row of parts) {
-      table.insertRow();
-      for (let cell of row) {
-        let newCell = table.rows[table.rows.length - 1].insertCell();
-        newCell.textContent = cell;
-      }
-    }
-    document.body.appendChild(table);*/
+    const parts = workorderRef.service.parts;
+    var table = document.getElementById("materialsTable");
+    var tr = "";
+    parts.forEach((x) => {
+      tr += "<tr>";
+      tr += "<td>" + x.quantity + "</td>" + "<td>" + x.partNumber + "</td>" + "<td>" + x.partDescription + "</td>";
+      tr += "</tr>";
+    });
+    table.innerHTML += tr;
   }
 }
 
