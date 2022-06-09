@@ -4,16 +4,46 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="/workflow-app/styles.css" />
     <title>Service</title>
   </head>
   <body>
-    <div class="serviceContainer">
-      <div class="title">Work Orders To Be Serviced</div>
-      <table name="table" class="tableContent" id="serviceTable">
-        <thead></thead>
-        <tbody></tbody>
-      </table>
-    </div>
-    <script src="loadServiceTable.js"></script>
+    <header class="navHeader">
+      <p class="navTitle">Work Flow</p>
+      <nav>
+        <ul class="navLinks">
+          <li class="navList">
+            <a class="navAnchor" href="forms/History/history.html"
+              ><span class="navPic"><img src="../../images/history.png" /></span>History</a
+            >
+          </li>
+          <li class="navList">
+            <a class="navAnchor" href="forms/Service/service.html"
+              >Service<span class="navPic"><img src="../../images/service.png" /></span
+            ></a>
+          </li>
+          <li class="navList">
+            <a class="navAnchor" href="forms/Admin/admin.html"
+              >Admin Input<span class="navPic"><img src="../../images/admin.png" /></span
+            ></a>
+          </li>
+          <li class="navList">
+            <a class="navAnchor" href="forms/Create/createForm.html"
+              >Create Order<span class="navPic"><img src="../../images/create.png" /></span
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="serviceContainer">
+        <div class="title">Work Orders To Be Serviced</div>
+        <table name="table" class="tableContent" id="serviceTable">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <script src="loadServiceTable.js"></script>
+    </main>
   </body>
 </html>

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
-body {
+.dashBody {
   margin: 0;
   height: 100vh;
   background-image: url(images/background.jpg);
@@ -12,6 +12,7 @@ body {
   justify-content: space-between;
   background-color: rgb(52, 75, 117);
   width: 100%;
+  min-height: 90px;
 }
 
 .navTitle {
@@ -36,7 +37,7 @@ nav {
 .navList {
   display: inline-flex;
   float: right;
-  padding: 15px;
+  padding: 10px;
 }
 
 .navAnchor {
@@ -46,6 +47,7 @@ nav {
   font-size: 16px;
   color: #ecf0f1;
   text-decoration: none;
+  justify-content: center;
 }
 
 .navAnchor:hover {
@@ -119,4 +121,12 @@ main .dashCard a:hover {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;
+}
+
+.navPic img {
+  width: 30px;
+  height: 30px;
+  border-radius: 30%;
+  vertical-align: middle;
+  padding: 3px;
 }

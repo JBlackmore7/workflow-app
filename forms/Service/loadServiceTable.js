@@ -29,7 +29,7 @@ async function loadIntoTable(url, table) {
 
   // Populate the rows
   for (const row of createOrder) {
-    if (row.jobNumber != null) {
+    if (row.jobNumber != "") {
       const rowElement = document.createElement("tr");
       let serviceWork = document.createElement("a");
       serviceWork.innerHTML = "Start Job";
