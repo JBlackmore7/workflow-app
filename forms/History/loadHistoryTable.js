@@ -33,6 +33,7 @@ async function loadIntoTable(url, table) {
     let history = document.createElement("button");
     history.innerHTML = "View";
     history.setAttribute("workorder_id", row.id);
+    history.setAttribute("class", "historyButton");
     history.addEventListener("click", openModal);
     Object.keys(headers).forEach((element) => {
       const cellElement = document.createElement("td");

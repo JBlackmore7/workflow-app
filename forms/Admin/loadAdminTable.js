@@ -35,7 +35,7 @@ async function loadIntoTable(url, table) {
       jobNumber.style.maxWidth = "75%";
       jobNumber.placeholder = "Enter Job Number";
       let checkMark = document.createElement("a");
-      checkMark.innerHTML = "&#x2714;";
+      checkMark.innerHTML = "&#x2705;";
       checkMark.className = "checkMark";
       checkMark.setAttribute("workorder_id", row.id);
       checkMark.onclick = function (event) {
