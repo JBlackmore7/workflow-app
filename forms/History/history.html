@@ -83,6 +83,11 @@
       <div id="overlay"></div>
       <script>
         function closeModal() {
+          var myTable = document.getElementById("materialsTable");
+          var rowCount = myTable.rows.length;
+          for (var x=rowCount-1; x>0; x--) {
+            myTable.deleteRow(x);
+          }
           modal.classList.remove("active");
           overlay.classList.remove("active");
         }

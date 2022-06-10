@@ -216,7 +216,12 @@ form .button input {
   z-index: 10;
   background-color: white;
   width: 500px;
-  max-width: 80%;
+}
+
+.modal-body {
+  padding: 10px 15px;
+  overflow-y: auto;
+  max-height: 60vh;
 }
 
 .modal.active {
@@ -249,10 +254,6 @@ form .button input {
   background: none;
   font-size: 1.25rem;
   font-weight: bold;
-}
-
-.modal-body {
-  padding: 10px 15px;
 }
 
 #overlay {

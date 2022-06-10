@@ -65,21 +65,21 @@ async function loadIntoTable(url, table) {
     h1.style.fontWeight = "550";
     const workorderRef = localWorkorderRef.find((event) => event.id == workorderID);
 
-    const myHelpfulFunction = (key, value) => (document.querySelector(`#${key} .modalValue`).innerHTML = value);
+    const loadPartsTable = (key, value) => (document.querySelector(`#${key} .modalValue`).innerHTML = value);
 
-    myHelpfulFunction("companyName", workorderRef.companyName);
-    myHelpfulFunction("companyAddress", workorderRef.companyAddress);
-    myHelpfulFunction("workSite", workorderRef.workSite);
-    myHelpfulFunction("contactName", workorderRef.contactName);
-    myHelpfulFunction("contactNumber", workorderRef.contactNumber);
-    myHelpfulFunction("contactEmail", workorderRef.contactEmail);
-    myHelpfulFunction("orderDetails", workorderRef.details);
-    myHelpfulFunction("date", workorderRef.date);
-    myHelpfulFunction("createdBy", workorderRef.employeeName);
-    myHelpfulFunction("serviceDetails", workorderRef.service.serviceDetails);
-    myHelpfulFunction("jobNumber", workorderRef.jobNumber);
-    myHelpfulFunction("notes", workorderRef.service.condemnationDetails);
-    myHelpfulFunction("truckStock", workorderRef.service.truckStock);
+    loadPartsTable("companyName", workorderRef.companyName);
+    loadPartsTable("companyAddress", workorderRef.companyAddress);
+    loadPartsTable("workSite", workorderRef.workSite);
+    loadPartsTable("contactName", workorderRef.contactName);
+    loadPartsTable("contactNumber", workorderRef.contactNumber);
+    loadPartsTable("contactEmail", workorderRef.contactEmail);
+    loadPartsTable("orderDetails", workorderRef.details);
+    loadPartsTable("date", workorderRef.date);
+    loadPartsTable("createdBy", workorderRef.employeeName);
+    loadPartsTable("serviceDetails", workorderRef.service.serviceDetails);
+    loadPartsTable("jobNumber", workorderRef.jobNumber);
+    loadPartsTable("notes", workorderRef.service.condemnationDetails);
+    loadPartsTable("truckStock", workorderRef.service.truckStock);
 
     const parts = workorderRef.service.parts;
     var table = document.getElementById("materialsTable");
