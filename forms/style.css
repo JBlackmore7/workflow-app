@@ -301,7 +301,17 @@ form .button input {
 }
 
 #log {
-  display: none;
+  /* display: none; */
+  margin-top: 10px;
+  color: white;
+  background-color: rgb(75, 181, 67);
+  text-align: center;
+  width: 40%;
+  height: 30px;
+  float: right;
+  border-radius: 10px;
+  line-height: 30px;
+  font-size: 17px;
 }
 
 #log.show {
