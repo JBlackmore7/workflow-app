@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .dashBody {
   margin: 0;
@@ -16,9 +18,9 @@
 }
 
 .navTitle {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Righteous', cursive;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 48px;
   color: #ecf0f1;
   width: 100%;
   padding-left: 40px;

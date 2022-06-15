@@ -37,7 +37,7 @@
     </header>
     <main>
       <div class="serviceContainer">
-        <div class="title">Service Work</div>
+        <div id="serviceTitle" class="title">Service Work</div>
         <form action="" name="serviceWork" class="serviceWork" id="serviceWork">
           <div class="serviceDetails">
             <div class="textBox">
@@ -55,7 +55,7 @@
               <label for="truckStock">Truck Number/Stock</label>
               <select name="truckStock" id="truckStock" required>
                 <option value="">Please choose an option</option>
-                <option value="Shop">Service Shop</option>
+                <option value="Service Shop">Service Shop</option>
                 <option value="CVS977">CVS977 - Caravan</option>
                 <option value="CVS978">CVS978 - Caravan</option>
                 <option value="JJN018">JJN018 - Quad Cab</option>
@@ -77,7 +77,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td id="col0"><input type="number" name="quantity" /></td>
+                    <td id="col0"><input type="number" min="0" name="quantity" /></td>
                     <td id="col1"><input type="text" name="partNumber" /></td>
                     <td id="col2"><input type="text" name="partDescription" /></td>
                   </tr>
@@ -104,7 +104,7 @@
           </div>
           <div class="button">
             <label for="btn2"></label>
-            <input type="submit" name="submit" id="btn2" value="Update Work Order" />
+            <input type="submit" name="submit" id="btn2" value="Complete Work Order" />
           </div>
         </form>
         <p id="log"></p>

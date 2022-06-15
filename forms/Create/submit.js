@@ -1,5 +1,6 @@
 function send(e, form) {
   e.preventDefault();
+
   let formData = new FormData(form);
 
   const plainFormData = Object.fromEntries(formData.entries());
@@ -12,8 +13,9 @@ function send(e, form) {
     },
     body: formDataJsonString,
   };
-  fetch(form.action, fetchOptions);
+
   const submitMessage = document.querySelector("#log");
   submitMessage.classList.add("show");
-  setTimeout(() => form.submit(), 2000);
+
+  setTimeout(fetch(form.action, fetchOptions), 2000);
 }

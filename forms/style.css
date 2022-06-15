@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
-
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 body {
   background-image: url(../images/background.jpg);
@@ -112,6 +112,30 @@ input {
 
 #adminTable thead th:nth-child(5) {
   width: 20%;
+}
+
+#serviceTable thead th:nth-child(1) {
+  width: 15%;
+}
+
+#serviceTable thead th:nth-child(2) {
+  width: 10%;
+}
+
+#serviceTable thead th:nth-child(3) {
+  width: 10%;
+}
+
+#serviceTable thead th:nth-child(4) {
+  width: 45%;
+}
+
+#serviceTable thead th:nth-child(5) {
+  width: 10%;
+}
+
+#serviceTable thead th:nth-child(6) {
+  width: 10%;
 }
 
 .checkMark {
@@ -301,7 +325,7 @@ form .button input {
 }
 
 #log {
-  /* display: none; */
+  display: none;
   margin-top: 10px;
   color: white;
   background-color: rgb(75, 181, 67);

@@ -11,6 +11,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     .then((data) => {
       console.log("Success:", data);
       createOrder = data;
+      let serviceTitle = document.getElementById("serviceTitle");
+      serviceTitle.innerHTML = "Work Order# " + workorder_id + " - " + createOrder.companyName;
     })
     .catch((error) => {
       console.error("Error:", error);
