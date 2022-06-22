@@ -38,7 +38,7 @@
     <main>
       <div class="container">
         <div class="title">Create Work Order</div>
-        <form action="http://localhost:3000/createOrder" method="post" onsubmit="send(event, this)" id="createForm">
+        <form method="post" onsubmit="send(event, this)" id="createForm">
           <div class="formDetails">
             <div class="inputBox">
               <label for="contactName">Contact Name</label>
@@ -111,6 +111,7 @@
         <p id="log">Work Order Created Successfully!</p>
       </div>
       <script src="submit.js"></script>
+      <script src="../data.js"></script>
     </main>
   </body>
 </html>

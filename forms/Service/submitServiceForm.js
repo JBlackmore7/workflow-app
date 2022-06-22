@@ -6,17 +6,20 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const urlSearchParams = new URLSearchParams(window.location.search);
   const workorder_id = urlSearchParams.get("workorder_id");
 
-  fetch("http://localhost:3000/createOrder/" + workorder_id)
+  /*fetch("http://localhost:3000/createOrder/" + workorder_id)
     .then((response) => response.json())
     .then((data) => {
       console.log("Success:", data);
       createOrder = data;
-      let serviceTitle = document.getElementById("serviceTitle");
-      serviceTitle.innerHTML = "Work Order# " + workorder_id + " - " + createOrder.companyName;
     })
     .catch((error) => {
       console.error("Error:", error);
-    });
+    });*/
+
+  let workOrder = workData.data.createOrder.find(({ id }) => id == workorder_id);
+
+  let serviceTitle = document.getElementById("serviceTitle");
+  serviceTitle.innerHTML = "Work Order# " + workorder_id + " - " + workOrder.companyName;
 
   const form = document.querySelector("form");
   form.addEventListener("submit", handleSubmit);
@@ -40,9 +43,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
       arr[i] = { quantity: q[i], partNumber: pn[i], partDescription: pd[i] };
     }
     object.parts = arr;
+    workOrder.service = object;
+    workData.completeOrder(workOrder);
+    workData.deleteOrder(workOrder);
 
-    createOrder.service = object;
-    let json = JSON.stringify(createOrder);
+    /*let json = JSON.stringify(createOrder);
     console.log(json);
 
     fetch("http://localhost:3000/completeOrder/", {
@@ -58,7 +63,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       headers: {
         "Content-type": "application/json",
       },
-    });
+    });*/
   }
 });
 

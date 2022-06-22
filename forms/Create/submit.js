@@ -4,18 +4,19 @@ function send(e, form) {
   let formData = new FormData(form);
 
   const plainFormData = Object.fromEntries(formData.entries());
-  const formDataJsonString = JSON.stringify(plainFormData);
+  workData.createOrder(plainFormData);
+  // const formDataJsonString = JSON.stringify(plainFormData);
 
-  const fetchOptions = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: formDataJsonString,
-  };
+  // const fetchOptions = {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: formDataJsonString,
+  // };
 
   const submitMessage = document.querySelector("#log");
   submitMessage.classList.add("show");
 
-  setTimeout(fetch(form.action, fetchOptions), 2000);
+  // setTimeout(fetch(form.action, fetchOptions), 2000);
 }

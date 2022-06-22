@@ -13,6 +13,46 @@
       "date": "2022-06-14",
       "id": 2,
       "jobNumber": "55555"
+    },
+    {
+      "contactName": "Jared Blackmore",
+      "companyName": "JJB Enterprises",
+      "contactNumber": "7096998777",
+      "companyAddress": "5 Raleigh Street, St. John's, NL, Canada",
+      "contactEmail": "jblackmore17@gmail.com",
+      "workSite": "N/A",
+      "details": "test",
+      "workorderType": "Inspection",
+      "employeeName": "Dr. Jan Itor",
+      "date": "2022-06-15",
+      "id": 3,
+      "jobNumber": "55555"
+    },
+    {
+      "contactName": "Jared Blackmore",
+      "companyName": "JJB Enterprises",
+      "contactNumber": "7096998777",
+      "companyAddress": "5 Raleigh Street, St. John's, NL, Canada",
+      "contactEmail": "jblackmore17@gmail.com",
+      "workSite": "N/A",
+      "details": "test",
+      "workorderType": "inspection",
+      "employeeName": "Gord Reid",
+      "date": "2022-06-15",
+      "id": 4
+    },
+    {
+      "contactName": "Sam",
+      "companyName": "JJB Enterprises",
+      "contactNumber": "7096998777",
+      "companyAddress": "5 Raleigh Street, St. John's, NL, Canada",
+      "contactEmail": "jblackmore17@gmail.com",
+      "workSite": "Blue on Water",
+      "details": "test",
+      "workorderType": "Inspection",
+      "employeeName": "Dr. Jan Itor",
+      "date": "2022-06-15",
+      "id": 5
     }
   ],
   "completeOrder": [
@@ -101,6 +141,42 @@
             "quantity": "4",
             "partNumber": "test",
             "partDescription": "test"
+          }
+        ]
+      }
+    },
+    {
+      "contactName": "Sam",
+      "companyName": "JJB Enterprises",
+      "contactNumber": "7096998777",
+      "companyAddress": "5 Raleigh Street, St. John's, NL, Canada",
+      "contactEmail": "jblackmore17@gmail.com",
+      "workSite": "Blue on Water",
+      "details": "fhsldkjfsd",
+      "workorderType": "Service",
+      "employeeName": "Dr. Jan Itor",
+      "date": "2022-07-20",
+      "id": 6,
+      "jobNumber": "11111",
+      "service": {
+        "serviceDetails": "test",
+        "truckStock": "Service Shop",
+        "condemnationDetails": "test",
+        "parts": [
+          {
+            "quantity": "11",
+            "partNumber": "T10CO2HR",
+            "partDescription": "H-Test + R/C - 10LB CO2"
+          },
+          {
+            "quantity": "22",
+            "partNumber": "test",
+            "partDescription": "test"
+          },
+          {
+            "quantity": "33",
+            "partNumber": "test part number",
+            "partDescription": "test part description"
           }
         ]
       }

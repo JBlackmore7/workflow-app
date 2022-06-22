@@ -7,12 +7,12 @@ const headers = {
 };
 var localWorkorderRef = [];
 
-async function loadIntoTable(url, table) {
+async function loadIntoTable(data, table) {
   const tableHead = table.querySelector("thead");
   const tableBody = table.querySelector("tbody");
-  const response = await fetch(url);
-  const createOrder = await response.json();
-  localWorkorderRef = createOrder;
+  //const response = await fetch(url);
+  //const createOrder = await response.json();
+  localWorkorderRef = data;
 
   // Clear the table
   tableHead.innerHTML = "<tr></tr>";
@@ -27,7 +27,7 @@ async function loadIntoTable(url, table) {
   });
 
   // Populate the rows
-  for (const row of createOrder) {
+  for (const row of data) {
     const rowElement = document.createElement("tr");
     // Create "Job Number Input"
     let jobNumber = document.createElement("input");
@@ -44,7 +44,8 @@ async function loadIntoTable(url, table) {
       if (!jobNum.value) return;
       let wo = localWorkorderRef.find((elem) => elem.id == event.currentTarget.getAttribute("workorder_id"));
       wo.jobNumber = jobNum.value;
-      fetch("http://localhost:3000/createOrder/" + row.id, {
+      workData.save();
+      /*fetch("http://localhost:3000/createOrder/" + row.id, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -57,7 +58,7 @@ async function loadIntoTable(url, table) {
         })
         .catch((error) => {
           console.error("Error:", error);
-        });
+        });*/
     };
     Object.keys(headers).forEach((element) => {
       const cellElement = document.createElement("td");
@@ -72,4 +73,4 @@ async function loadIntoTable(url, table) {
   }
 }
 
-loadIntoTable("http://localhost:3000/createOrder", document.querySelector("table"));
+loadIntoTable(workData.data.createOrder, document.querySelector("table"));

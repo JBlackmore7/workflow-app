@@ -8,12 +8,12 @@ const headers = {
 };
 var localWorkorderRef = [];
 
-async function loadIntoTable(url, table) {
+async function loadIntoTable(data, table) {
   const tableHead = table.querySelector("thead");
   const tableBody = table.querySelector("tbody");
-  const response = await fetch(url);
-  const createOrder = await response.json();
-  localWorkorderRef = createOrder;
+  //const response = await fetch(url);
+  //const createOrder = await response.json();
+  localWorkorderRef = data;
 
   // Clear the table
   tableHead.innerHTML = "<tr></tr>";
@@ -28,7 +28,7 @@ async function loadIntoTable(url, table) {
   });
 
   // Populate the rows
-  for (const row of createOrder) {
+  for (const row of data) {
     if (row.jobNumber != undefined) {
       const rowElement = document.createElement("tr");
       let serviceWork = document.createElement("a");
@@ -47,4 +47,4 @@ async function loadIntoTable(url, table) {
   }
 }
 
-loadIntoTable("http://localhost:3000/createOrder", document.querySelector("table"));
+loadIntoTable(workData.data.createOrder, document.querySelector("table"));
