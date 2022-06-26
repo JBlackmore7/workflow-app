@@ -188,12 +188,9 @@ class WorkorderData {
     return ++lastIndex;
   }
 
-  deleteOrder(oldOrder) {
-    const obj = oldOrder;
-    for (const key in obj) {
-      delete obj[key];
-    }
-  }
+  /*deleteOrder(oldOrder) {
+    localStorage.removeItem(oldOrder);
+  }*/
 
   createOrder(orderData) {
     orderData.id = this.nextIndex(this.data.createOrder);
@@ -203,6 +200,14 @@ class WorkorderData {
 
   completeOrder(finishedOrder) {
     this.data.completeOrder.push(finishedOrder);
+    let workorder_id = finishedOrder.id;
+    //let index = this.data.createOrder.indexOf(workorder_id);
+    let index = this.data.createOrder.findIndex((object) => {
+      return object.id === workorder_id;
+    });
+    if (index > -1) {
+      this.data.createOrder.splice(index, 1);
+    }
     this.save();
   }
 }

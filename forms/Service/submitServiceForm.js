@@ -45,7 +45,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     object.parts = arr;
     workOrder.service = object;
     workData.completeOrder(workOrder);
-    workData.deleteOrder(workOrder);
+    //workData.deleteOrder(workOrder);
 
     /*let json = JSON.stringify(createOrder);
     console.log(json);
