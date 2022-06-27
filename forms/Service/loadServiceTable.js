@@ -33,6 +33,7 @@ async function loadIntoTable(data, table) {
       const rowElement = document.createElement("tr");
       let serviceWork = document.createElement("a");
       serviceWork.innerHTML = "Start Job";
+      serviceWork.setAttribute("class", "historyButton");
       serviceWork.setAttribute("workorder_id", row.id);
       serviceWork.href = "serviceForm.html?workorder_id=" + row.id;
       Object.keys(headers).forEach((element) => {
