@@ -46,7 +46,11 @@ async function loadIntoTable(data, table) {
         let wo = localWorkorderRef.find((elem) => elem.id == event.currentTarget.getAttribute("workorder_id"));
         wo.jobNumber = jobNum.value;
         workData.save();
-        document.location.reload();
+        const submitMessage = document.querySelector("#log");
+        submitMessage.classList.add("show");
+        window.setTimeout(function () {
+          location.reload();
+        }, 2000);
         /*fetch("http://localhost:3000/createOrder/" + row.id, {
           method: "PUT",
           headers: {

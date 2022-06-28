@@ -45,6 +45,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
     object.parts = arr;
     workOrder.service = object;
     workData.completeOrder(workOrder);
+    const submitMessage = document.querySelector("#log");
+    submitMessage.classList.add("show");
+    window.setTimeout(function () {
+      history.back();
+    }, 2000);
     //workData.deleteOrder(workOrder);
 
     /*let json = JSON.stringify(createOrder);

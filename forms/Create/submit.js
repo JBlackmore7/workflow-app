@@ -17,6 +17,9 @@ function send(e, form) {
 
   const submitMessage = document.querySelector("#log");
   submitMessage.classList.add("show");
+  window.setTimeout(function () {
+    location.reload();
+  }, 2000);
 
   // setTimeout(fetch(form.action, fetchOptions), 2000);
 }
