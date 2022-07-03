@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.dashBody {
+  margin: 0;
+  height: 100vh;
+  background-image: url(images/background.jpg);
+}
+
+.navHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(52, 75, 117);
+  width: 100%;
+  min-height: 90px;
+}
+
+.navTitle {
+  font-family: 'Righteous', cursive;
+  font-weight: 500;
+  font-size: 48px;
+  color: #ecf0f1;
+  width: 100%;
+  padding-left: 40px;
+  text-decoration: none;
+}
+
+nav {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.navLinks {
+  margin: auto;
+  padding: 0%;
+}
+
+.navList {
+  display: inline-flex;
+  float: right;
+  padding: 10px;
+}
+
+.navAnchor {
+  transition: all 0.3s ease 0s;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #ecf0f1;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.navAnchor:hover {
+  color: rgba(252, 116, 4);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+main .dashCard a {
+  display: grid;
+  grid-template-columns: 275px;
+  grid-template-rows: 400px 80px;
+  grid-template-areas: "images" "text";
+
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  margin: 70px 35px;
+  background-color: rgb(52, 75, 117);
+  transition: 0.5s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+main .dashCard a:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.workOrderText, .adminText, .serviceText, .historyText {
+  grid-area: text;
+  margin: 25px;
+  font-size: 22px;
+  color: #ecf0f1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.workOrderImage {
+  grid-area: images;
+  background: url(images/create.png);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.adminImage {
+  grid-area: images;
+  background: url(images/admin.png);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.serviceImage {
+  grid-area: images;
+  background: url(images/service.png);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.historyImage {
+  grid-area: images;
+  background: url(images/history.png);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.navPic img {
+  width: 30px;
+  height: 30px;
+  border-radius: 30%;
+  vertical-align: middle;
+  padding: 3px;
+}
+
+.closeButton {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  float: right;
+}
+
+.modal-body h1 {
+  text-align: center;
+}
+
+.d1 {
+  list-style-image: url(images/createSmall.png);
+}
+
+.d2 {
+  list-style-image: url(images/adminSmall.png);
+}
+
+.d3 {
+  list-style-image: url(images/serviceSmall.png);
+}
+
+.d4 {
+  list-style-image: url(images/historySmall.png);
+}
+
+.button-70 {
+  background-image: linear-gradient(#0dccea, #0d70ea);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: Montserrat,sans-serif;
+  font-size: .9em;
+  margin: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.centerButton {
+  text-align: center;
+}
