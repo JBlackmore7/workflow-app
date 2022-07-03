@@ -133,3 +133,13 @@ main .dashCard a:hover {
   vertical-align: middle;
   padding: 3px;
 }
+
+.closeButton {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  float: right;
+}

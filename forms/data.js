@@ -191,10 +191,6 @@ class WorkorderData {
     return ++lastIndex;
   }
 
-  /*deleteOrder(oldOrder) {
-    localStorage.removeItem(oldOrder);
-  }*/
-
   createOrder(orderData) {
     orderData.id = this.nextIndex(this.data.createOrder);
     this.data.createOrder.push(orderData);
@@ -204,7 +200,6 @@ class WorkorderData {
   completeOrder(finishedOrder) {
     this.data.completeOrder.push(finishedOrder);
     let workorder_id = finishedOrder.id;
-    //let index = this.data.createOrder.indexOf(workorder_id);
     let index = this.data.createOrder.findIndex((object) => {
       return object.id === workorder_id;
     });
