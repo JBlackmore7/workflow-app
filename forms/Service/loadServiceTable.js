@@ -32,7 +32,7 @@ async function loadIntoTable(data, table) {
     if (row.jobNumber != undefined) {
       const rowElement = document.createElement("tr");
       let serviceWork = document.createElement("a");
-      serviceWork.innerHTML = "Start Job";
+      serviceWork.innerHTML = "Start";
       serviceWork.setAttribute("class", "historyButton");
       serviceWork.setAttribute("workorder_id", row.id);
       serviceWork.href = "serviceForm.html?workorder_id=" + row.id;

@@ -16,7 +16,7 @@
     flex-direction: wrap;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    margin: 5px 5px;
   }
   
   .container,
@@ -24,9 +24,9 @@
   .serviceContainer,
   .historyContainer {
     max-width: 960px;
-    width: 100%;
+    width: 95%;
     background: #fff;
-    padding: 20px 20px;
+    padding: 10px 10px;
     margin: 2px;
     border-radius: 8px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
@@ -36,7 +36,7 @@
   .adminContainer .title,
   .serviceContainer .title,
   .historyContainer .title {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 600;
     position: relative;
   }
@@ -70,6 +70,10 @@
     width: calc(100% / 3 - 15px);
     margin-bottom: 10px;
   }
+
+  .lowerBox label, .inputBox label, .textBox label {
+    font-size: 12px;
+  }
   
   .formDetails .lowerBox select,
   input {
@@ -94,6 +98,10 @@
     border-radius: 5px;
     padding-left: 3px;
     font-size: 14px;
+  }
+
+  #adminTable tbody tr td input::placeholder {
+    font-size: 11px;
   }
   
   #adminTable thead th:nth-child(1) {
@@ -145,13 +153,12 @@
   }
   
   .checkMark {
-    display: inline-block;
+    display: block;
     cursor: pointer;
     font-size: 140%;
-    margin-left: 1px;
-    position: fixed;
-    min-width: 27px;
-    min-height: 27px;
+    min-width: 30px;
+    min-height: 30px;
+    text-align: center;
   }
   
   .checkMark:active {
@@ -160,11 +167,13 @@
   
   .serviceDetails .truckStock {
     margin-bottom: 10px;
+    font-size: 12px;
   }
   
   .serviceDetails .materialsTable {
     margin-bottom: 10px;
     width: 100%;
+    font-size: 12px;
   }
   
   .serviceDetails .materialsTable table.materials {
@@ -173,6 +182,7 @@
     border: solid 1px black;
     border-radius: 5px;
     padding: 2px;
+    font-size: 12px;
   }
   
   .serviceDetails .materialsTable table tbody tr td input {
@@ -213,9 +223,9 @@
   
   .tableContent {
     border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    min-width: 400px;
+    margin: 10px 0;
+    font-size: 11px;
+    min-width: 300px;
     width: 100%;
   }
   
@@ -247,7 +257,8 @@
     border-radius: 10px;
     z-index: 10;
     background-color: white;
-    width: 600px;
+    font-size: 12px;
+    width: 95%;
   }
   
   .modal-body {
@@ -426,22 +437,61 @@
   
   .navTitle {
     font-family: 'Righteous', cursive;
-    font-weight: 500;
-    font-size: 48px;
+    font-weight: 400;
+    font-size: 40px;
     color: #ecf0f1;
     width: 100%;
-    padding-left: 15px;
+    padding-left: 30px;
     text-decoration: none;
-    max-width: 232px;
+    /* min-width: 200px; */
   }
   
   nav {
-    width: 100%;
-    padding-right: 15px;
-    max-width: 320px;
+    width: 75%;
+    padding-right: 0px;
+    /* max-width: 320px; */
+    justify-content: center;
+  }
+
+  .dropdown {
+    display: flex;
+    justify-content: center;
+  }
+
+  .dropdown .dropbtn {
+    margin: 0;
+    background-color: inherit;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+  }
+
+  .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(52, 75, 117);
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, .2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content .show {
+    display: flex;
   }
   
   .navLinks {
+    display: none;
     margin: auto;
     padding: 0%;
   }
@@ -460,6 +510,7 @@
     color: #ecf0f1;
     text-decoration: none;
     justify-content: center;
+    border: solid white 1px;
   }
   
   .navAnchor:hover {
@@ -476,14 +527,14 @@
   
   main .dashCard a {
     display: grid;
-    grid-template-columns: 180px;
-    grid-template-rows: 260px 55px;
+    grid-template-columns: 120px;
+    grid-template-rows: 180px 40px;
     grid-template-areas: "images" "text";
   
     border-radius: 15px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
     text-align: center;
-    margin: 15px 25px;
+    margin: 20px 15px;
     background-color: rgb(52, 75, 117);
     transition: 0.5s ease;
     cursor: pointer;
@@ -497,7 +548,7 @@
   
   .workOrderText, .adminText, .serviceText, .historyText {
     grid-area: text;
-    margin: 15px;
+    margin: 8px;
     font-size: 22px;
     color: #ecf0f1;
     font-family: "Montserrat", sans-serif;

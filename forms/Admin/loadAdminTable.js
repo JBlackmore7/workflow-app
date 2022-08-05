@@ -33,7 +33,7 @@ async function loadIntoTable(data, table) {
       // Create "Job Number Input"
       let jobNumber = document.createElement("input");
       jobNumber.setAttribute("type", "text");
-      jobNumber.style.maxWidth = "75%";
+      jobNumber.style.maxWidth = "90%";
       jobNumber.placeholder = "Enter Job Number";
       // Create check mark button
       let checkMark = document.createElement("a");
