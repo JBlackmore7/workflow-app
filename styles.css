@@ -441,15 +441,14 @@
     font-size: 40px;
     color: #ecf0f1;
     width: 100%;
-    padding-left: 30px;
+    padding-left: 25px;
     text-decoration: none;
-    /* min-width: 200px; */
+    min-width: 200px;
   }
   
   nav {
     width: 75%;
     padding-right: 0px;
-    /* max-width: 320px; */
     justify-content: center;
   }
 
