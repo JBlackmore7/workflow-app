@@ -463,8 +463,8 @@
     outline: none;
     border: none;
     cursor: pointer;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 8px;
   }
 
@@ -521,7 +521,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding: 0px;
   }
   
