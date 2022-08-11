@@ -27,7 +27,6 @@
     width: 95%;
     background: #fff;
     padding: 10px 10px;
-    margin: 2px;
     border-radius: 8px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   }
@@ -47,7 +46,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 20px 0 12px 0;
   }
   
   .formDetails .inputBox,
@@ -190,15 +188,15 @@
   }
   
   .serviceDetails .materialsTable table thead th:nth-child(1) {
-    width: 10%;
+    width: 15%;
   }
   
   .serviceDetails .materialsTable table thead th:nth-child(2) {
-    width: 35%;
+    width: 25%;
   }
   
   .serviceDetails .materialsTable table thead th:nth-child(3) {
-    width: 55%;
+    width: 50%;
   }
   
   form .button {
@@ -223,9 +221,8 @@
   
   .tableContent {
     border-collapse: collapse;
-    margin: 10px 0;
-    font-size: 11px;
-    min-width: 300px;
+    margin: 5px 0;
+    font-size: 9px;
     width: 100%;
   }
   
@@ -257,13 +254,14 @@
     border-radius: 10px;
     z-index: 10;
     background-color: white;
-    font-size: 12px;
+    font-size: 11px;
     width: 95%;
   }
   
   .modal-body {
-    padding: 10px 15px;
+    padding: 8px 8px;
     overflow-y: auto;
+    overflow-x: hidden;
     max-height: 65vh;
   }
   
@@ -476,6 +474,8 @@
     min-width: 180px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, .2);
     z-index: 1;
+    right: 0;
+    top: 65px;
   }
 
   .dropdown-content a {
@@ -673,7 +673,6 @@
     width: 100%;
     background: #fff;
     padding: 20px 20px;
-    margin: 2px;
     border-radius: 8px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   }
@@ -693,7 +692,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 20px 0 12px 0;
   }
   
   .formDetails .inputBox,
