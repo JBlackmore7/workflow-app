@@ -65,7 +65,7 @@
   }
   
   .formDetails .lowerBox {
-    width: calc(100% / 3 - 15px);
+    width: 140px;
     margin-bottom: 10px;
   }
 
@@ -75,11 +75,10 @@
   
   .formDetails .lowerBox select,
   input {
-    height: 30px;
-    width: 100%;
+    height: 20px;
+    width: 60%;
     border: 1px solid black;
     border-radius: 8px;
-    padding-left: 3px;
   }
   
   .formDetails .textBox,
@@ -96,6 +95,10 @@
     border-radius: 5px;
     padding-left: 3px;
     font-size: 14px;
+  }
+
+  #employeeName {
+    width: 290px;
   }
 
   #adminTable tbody tr td input::placeholder {
@@ -119,7 +122,7 @@
   }
   
   #adminTable thead th:nth-child(5) {
-    width: 21%;
+    width: 25%;
   }
   
   #serviceTable thead th:nth-child(1) {
@@ -151,12 +154,13 @@
   }
   
   .checkMark {
-    display: block;
+    display: inline;
     cursor: pointer;
     font-size: 140%;
     min-width: 30px;
     min-height: 30px;
     text-align: center;
+    padding-left: 2px;
   }
   
   .checkMark:active {
@@ -185,6 +189,7 @@
   
   .serviceDetails .materialsTable table tbody tr td input {
     border-radius: 5px;
+    width: 100%;
   }
   
   .serviceDetails .materialsTable table thead th:nth-child(1) {
@@ -262,7 +267,7 @@
     padding: 8px 8px;
     overflow-y: auto;
     overflow-x: hidden;
-    max-height: 65vh;
+    max-height: 70vh;
   }
   
   .modal.active {
@@ -430,7 +435,7 @@
     justify-content: space-between;
     background-color: rgb(52, 75, 117);
     width: 100%;
-    min-height: 90px;
+    min-height: 65px;
   }
   
   .navTitle {
@@ -757,7 +762,11 @@
   }
   
   #adminTable thead th:nth-child(5) {
-    width: 21%;
+    width: 20%;
+  }
+
+  #adminTable tbody th:nth-child(5) {
+    width: 20%;
   }
   
   #serviceTable thead th:nth-child(1) {
