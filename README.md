@@ -1,7 +1,7 @@
 # Work Flow
 
 - Work Flow is a work order web application that lets users create work orders, update them with new information, and view the completed order.
-- Live demo [_here_](https://jblackmore7.github.io/). Can only be viewed on desktop at the moment. Working on mobile friendly styling.
+- Live demo [_here_](https://jblackmore7.github.io/).
 
 ## Inspiration
 
@@ -33,7 +33,6 @@ Room for improvement:
 
 To do:
 
-- Mobile Friendly Styling
 - The ability to edit a work order in any state
 
 ## Acknowledgements
